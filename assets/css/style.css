@@ -91,7 +91,7 @@
   --fw-400: 400;
   --fw-500: 500;
   --fw-600: 600;
-
+  --fw-800: 800;
   /**
    * shadow
    */
@@ -229,14 +229,18 @@ article.active {
 }
 .h6 {
   color: var(--white-2);
-  font-size: var(--fs-4);
+  font-size: var(--fs-6);
 }
 
-.h2 { font-size: var(--fs-1); }
+.h2 { font-size: var(--fs-1); 
+  margin-top: 3em;
+}
 
 .h3 { font-size: var(--fs-2); }
 
-.h4 { font-size: var(--fs-4); }
+.h4 { font-size: var(--fs-4);
+  color: var(--vegas-gold);
+ }
 
 .h5 {
   font-size: var(--fs-7);
@@ -506,10 +510,10 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  text-align: justify;
 }
 
 .about-text p { margin-bottom: 15px; }
-
 
 
 /**
@@ -557,6 +561,8 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
   line-height: 1.6;
+  text-align: justify;
+
 }
 
 
@@ -800,9 +806,10 @@ main {
 }
 
 .timeline-list span {
-  color: var(--vegas-gold);
+  color: var(--white-2);
   font-weight: var(--fw-400);
   line-height: 1.6;
+  margin-bottom: 1em;
 }
 
 .timeline-item:not(:last-child)::before {
@@ -831,7 +838,83 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  margin-bottom: 1em;
+  text-align: justify;
 }
+
+/*-----------------------------------*\
+  #SKILLS
+\*-----------------------------------*/
+
+.article-title { margin-bottom: 30px; }
+
+
+/**
+ * education and experience 
+ */
+
+.timeline { margin-bottom: 30px; }
+
+.timeline .title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.timeline-list {
+  font-size: var(--fs-6);
+  margin-left: 45px;
+}
+
+.timeline-item { position: relative; }
+
+.timeline-item:not(:last-child) { margin-bottom: 20px; }
+
+.timeline-item-title {
+  font-size: var(--fs-6);
+  line-height: 1.3;
+  margin-bottom: 7px;
+}
+
+.timeline-list span {
+  color: var(--white-2);
+  font-weight: var(--fw-400);
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+.timeline-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -30px;
+  width: 1px;
+  height: calc(100% + 50px);
+  background: var(--jet);
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -33px;
+  height: 6px;
+  width: 6px;
+  background: var(--text-gradient-yellow);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--jet);
+}
+
+.timeline-text {
+  color: var(--light-gray);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+
+
 
 
 /**
@@ -872,7 +955,117 @@ main {
 }
 
 
+/*-----------------------------------*\
+  #ACCOMPLISHMENTS
+\*-----------------------------------*/
 
+.article-title { margin-bottom: 30px; }
+
+
+/**
+ * education and experience 
+ */
+
+.timeline { margin-bottom: 30px; }
+
+.timeline .title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.timeline-list {
+  font-size: var(--fs-6);
+  margin-left: 45px;
+}
+
+.timeline-item { position: relative; }
+
+.timeline-item:not(:last-child) { margin-bottom: 20px; }
+
+.timeline-item-title {
+  font-size: var(--fs-6);
+  line-height: 1.3;
+  margin-bottom: 7px;
+}
+
+.timeline-list span {
+  color: var(--white-2);
+  font-weight: var(--fw-400);
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+.timeline-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -30px;
+  width: 1px;
+  height: calc(100% + 50px);
+  background: var(--jet);
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -33px;
+  height: 6px;
+  width: 6px;
+  background: var(--text-gradient-yellow);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--jet);
+}
+
+.timeline-text {
+  color: var(--light-gray);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+
+/* Add styles for bullet points in blog content */
+.timeline-item ul {
+  color: var(--light-gray);
+  list-style: none;
+  counter-reset: list;
+}
+
+.timeline-item ul li::before {
+  content: "\2022"; /* Bullet character */
+  font-size: 10px; /* Adjust bullet size */
+  font-weight: var(--fw-300); /* Make bullet bold */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.timeline-item ul li {
+  position: relative;
+  padding-left: 1em; /* Adjust the space between bullet and text */
+  margin-bottom: 10px; /* Adjust space between list items */
+}
+li:nth-child() {
+  color: var(--white-1); /* Change to the color you want */
+}
+
+li:nth-child(odd) {
+  color: var(--white-2); /* Change to the color you want */
+}
+/* Justify text within list items */
+ul {
+  text-align: justify;
+}
+
+/* Prevent last line from being justified */
+ul::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
 
 
 /*-----------------------------------*\
@@ -1502,6 +1695,36 @@ textarea.form-input::-webkit-resizer { display: none; }
     left: -43px;
   }
 
+  /**
+   * #SKILLS
+   */
+
+   .timeline-list { margin-left: 65px; }
+
+   .timeline-item:not(:last-child)::before { left: -40px; }
+ 
+   .timeline-item::after {
+     height: 8px;
+     width: 8px;
+     left: -43px;
+   }
+
+
+  /**
+   * #ACCOMPLISHMENTS
+   */
+
+   .timeline-list { margin-left: 65px; }
+
+   .timeline-item:not(:last-child)::before { left: -40px; }
+ 
+   .timeline-item::after {
+     height: 8px;
+     width: 8px;
+     left: -43px;
+   }
+
+
   .skills-item:not(:last-child) { margin-bottom: 25px; }
 
 
@@ -1882,5 +2105,17 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 */
 
   .timeline-text { max-width: 700px; }
+  /**
+	 * SKILLS
+	 */
+
+   .timeline-text { max-width: 700px; }
+  /**
+	 * ACCOMPLISHMENTS
+	 */
+
+   .timeline-text { max-width: 700px; }
+
+
 
 }
