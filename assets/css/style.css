@@ -227,6 +227,10 @@ article.active {
   color: var(--white-2);
   text-transform: capitalize;
 }
+.h6 {
+  color: var(--white-2);
+  font-size: var(--fs-4);
+}
 
 .h2 { font-size: var(--fs-1); }
 
