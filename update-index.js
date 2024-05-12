@@ -1,6 +1,6 @@
-const fs = require('fs');
-const cheerio = require('cheerio');
-const fetch = require('node-fetch');
+import fs from 'fs';
+import cheerio from 'cheerio';
+import fetch from 'node-fetch';
 
 async function fetchContributionActivity() {
     const username = process.env.GH_USERNAME; // Access GitHub username from repository secret
@@ -51,5 +51,5 @@ async function updateIndexHtml() {
     }
 }
 
-// Call the function to update index.html when the workflow runs
+// Call the function to update index.html
 updateIndexHtml();
