@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: "0 0 * * *" # Runs daily at midnight
 
+
 jobs:
   fetch-contribution:
     runs-on: ubuntu-latest
