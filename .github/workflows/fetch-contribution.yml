@@ -2,7 +2,7 @@ name: Fetch and Update GitHub Contribution
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Runs daily at midnight
+    - cron: "*/5 * * * *"
 
 
 jobs:
