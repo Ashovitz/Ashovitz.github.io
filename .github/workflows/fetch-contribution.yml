@@ -1,8 +1,6 @@
 name: Fetch and Update GitHub Contribution
 
 on:
-  schedule:
-    - cron: "*/2 * * * *"
   push:
     paths:
       - 'index.html'
